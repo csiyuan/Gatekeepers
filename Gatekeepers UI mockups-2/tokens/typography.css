@@ -1,0 +1,56 @@
+/* ============================================================
+   Mynah — Typography tokens
+   Display: Baloo 2 (rounded, warm) — headings, buttons, numbers.
+   Body:    Nunito (humanist sans) — UI + reading text.
+   Mono:    Spline Sans Mono — phonetics (pinyin/romaji), codes, timers.
+   ============================================================ */
+:root {
+  --font-display: 'Baloo 2', ui-rounded, 'Segoe UI', system-ui, sans-serif;
+  --font-body:    'Nunito', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono:    'Spline Sans Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* weights */
+  --weight-regular: 400;
+  --weight-medium:  500;
+  --weight-semibold:600;
+  --weight-bold:    700;
+  --weight-extra:   800;
+
+  /* Type scale (px). Display sizes pair with --font-display. */
+  --text-display-lg: 40px;  /* hero numbers, celebration */
+  --text-display:    32px;  /* screen titles */
+  --text-h1:         28px;
+  --text-h2:         22px;
+  --text-h3:         18px;
+  --text-title:      17px;  /* exercise prompt label */
+  --text-body-lg:    18px;
+  --text-body:       16px;
+  --text-sm:         14px;
+  --text-xs:         12px;
+  --text-eyebrow:    13px;  /* uppercase tracked label */
+
+  /* line heights */
+  --leading-tight:  1.1;
+  --leading-snug:   1.25;
+  --leading-normal: 1.45;
+  --leading-relaxed:1.6;
+
+  /* letter spacing */
+  --tracking-tight:  -0.01em;
+  --tracking-normal: 0em;
+  --tracking-wide:   0.04em;
+  --tracking-eyebrow:0.08em;
+
+  /* ---- Composed text roles (font + size + weight + leading) ---- */
+  --type-display-lg: var(--weight-extra) var(--text-display-lg)/var(--leading-tight) var(--font-display);
+  --type-display:    var(--weight-bold)  var(--text-display)/var(--leading-tight) var(--font-display);
+  --type-h1:         var(--weight-bold)  var(--text-h1)/var(--leading-snug) var(--font-display);
+  --type-h2:         var(--weight-bold)  var(--text-h2)/var(--leading-snug) var(--font-display);
+  --type-h3:         var(--weight-semibold) var(--text-h3)/var(--leading-snug) var(--font-display);
+  --type-button:     var(--weight-bold)  var(--text-body)/1 var(--font-display);
+  --type-body-lg:    var(--weight-regular) var(--text-body-lg)/var(--leading-relaxed) var(--font-body);
+  --type-body:       var(--weight-regular) var(--text-body)/var(--leading-normal) var(--font-body);
+  --type-body-strong:var(--weight-bold)  var(--text-body)/var(--leading-normal) var(--font-body);
+  --type-sm:         var(--weight-regular) var(--text-sm)/var(--leading-normal) var(--font-body);
+  --type-mono:       var(--weight-medium) var(--text-sm)/1.3 var(--font-mono);
+}

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="tokens/fonts.css">
+<link rel="stylesheet" href="tokens/colors.css">
+<link rel="stylesheet" href="tokens/typography.css">
+<link rel="stylesheet" href="tokens/spacing.css">
+<script src="./image-slot.js"></script>
+<style>
+body{margin:0;background:var(--bg-app);font:var(--type-body);color:var(--text-body);-webkit-font-smoothing:antialiased}
+a{color:var(--grape-600);text-decoration:none}
+a:hover{color:var(--grape-500)}
+</style>
+</helmet>
+<div style="min-width: 1100px">
+<header style="background: var(--surface-card); border-bottom: var(--border-w-sm) solid var(--border-default)">
+  <div style="max-width: 1160px; margin: 0 auto; padding: 16px 32px; display: flex; align-items: center; gap: 32px">
+    <div style="display: flex; align-items: center; gap: 10px">
+      <div style="width: 36px; height: 36px; border-radius: var(--radius-sm); background: var(--grape-700); display: grid; place-items: center; color: white">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="4.5"></circle><path d="m21 2-9.6 9.6"></path><path d="m15.5 7.5 3 3L22 7l-3-3"></path></svg>
+      </div>
+      <div style="display: flex; flex-direction: column; line-height: 1">
+        <span style="font: var(--weight-bold) 19px/1 var(--font-display); color: var(--text-strong); letter-spacing: var(--tracking-tight)">Gatekeepers</span>
+        <span style="font: var(--weight-semibold) 10px/1.5 var(--font-body); letter-spacing: var(--tracking-eyebrow); color: var(--text-muted); text-transform: uppercase">Singapore · Est. 1975</span>
+      </div>
+    </div>
+    <nav style="display: flex; gap: 28px; margin-left: auto; align-items: center">
+      <a href="#" style="font: var(--weight-semibold) 15px/1 var(--font-body); color: var(--text-body)" style-hover="color: var(--text-strong)">School of Gatekeepers</a>
+      <a href="#" style="font: var(--weight-semibold) 15px/1 var(--font-body); color: var(--text-body)" style-hover="color: var(--text-strong)">Events</a>
+      <a href="#" style="font: var(--weight-semibold) 15px/1 var(--font-body); color: var(--text-body)" style-hover="color: var(--text-strong)">Members</a>
+      <a href="#" style="font: var(--weight-semibold) 15px/1 var(--font-body); color: var(--text-body)" style-hover="color: var(--text-strong)">About us</a>
+    </nav>
+    <a href="#" style="font: var(--weight-bold) 15px/1 var(--font-display); color: var(--text-on-primary); background: var(--grape-700); padding: 12px 22px; border-radius: var(--radius-md)" style-hover="background: var(--grape-600); color: var(--text-on-primary)">Give now</a>
+  </div>
+</header>
+
+<section style="background: var(--surface-card)">
+  <div style="max-width: 1160px; margin: 0 auto; padding: 76px 32px 84px; display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 72px; align-items: center">
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 24px">
+      <sc-if value="{{ showAnniversary }}" hint-placeholder-val="{{ true }}">
+        <div style="font: var(--weight-bold) var(--text-eyebrow)/1 var(--font-body); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--grape-600); border-bottom: var(--border-w) solid var(--grape-200); padding-bottom: 8px">Est. 1975 — 50 years of marketplace discipleship</div>
+      </sc-if>
+      <h1 style="margin: 0; font: var(--weight-bold) 54px/1.08 var(--font-display); letter-spacing: var(--tracking-tight); color: var(--text-strong)">You hold the key.</h1>
+      <p style="margin: 0; font: var(--type-body-lg); color: var(--text-body); max-width: 48ch">For fifty years, Gatekeepers has equipped Christians to live out Kingdom values where they work — transforming lives and impacting culture across Singapore's marketplace.</p>
+      <div style="display: flex; gap: 14px; margin-top: 8px">
+        <a href="#" style="font: var(--weight-bold) 16px/1 var(--font-display); color: var(--text-on-primary); background: var(--grape-700); padding: 16px 28px; border-radius: var(--radius-md); box-shadow: 0 var(--edge-height) 0 var(--grape-900)" style-hover="background: var(--grape-600); color: var(--text-on-primary)" style-active="transform: translateY(4px); box-shadow: none">See upcoming events</a>
+        <a href="#" style="font: var(--weight-bold) 16px/1 var(--font-display); color: var(--text-strong); background: var(--surface-card); border: var(--border-w-sm) solid var(--border-strong); padding: 16px 28px; border-radius: var(--radius-md)" style-hover="background: var(--surface-sunken); color: var(--text-strong)">Explore our mission</a>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 200px 200px; gap: 14px">
+      <div style="grid-row: 1 / 3; border-radius: var(--radius-lg); overflow: hidden">
+        <image-slot id="hero-photo" shape="rect" src="https://loremflickr.com/700/900/conference,audience?lock=14" placeholder="Main photo — a Gatekeepers gathering"></image-slot>
+      </div>
+      <div style="border-radius: var(--radius-lg); overflow: hidden">
+        <image-slot id="hero-photo-2" shape="rect" src="https://loremflickr.com/500/360/seminar,speaker?lock=7" placeholder="Photo — teaching session"></image-slot>
+      </div>
+      <div style="border-radius: var(--radius-lg); overflow: hidden">
+        <image-slot id="hero-photo-3" shape="rect" src="https://loremflickr.com/500/360/dinner,friends?lock=21" placeholder="Photo — table conversation"></image-slot>
+      </div>
+    </div>
+  </div>
+</section>
+
+<sc-if value="{{ visionDark }}" hint-placeholder-val="{{ true }}">
+<section style="background: var(--grape-900)">
+  <div style="max-width: 860px; margin: 0 auto; padding: 76px 32px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 20px">
+    <div style="font: var(--weight-bold) var(--text-eyebrow)/1 var(--font-body); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--grape-300)">Our vision</div>
+    <div style="font: var(--weight-bold) 32px/1.35 var(--font-display); letter-spacing: var(--tracking-tight); color: var(--ink-0); text-wrap: balance">Nations transformed in every area of culture — for human flourishing and the glory of God.</div>
+    <div style="font: italic var(--weight-regular) 17px/var(--leading-relaxed) var(--font-body); color: var(--grape-200); max-width: 56ch">"Go therefore and make disciples of all the nations, baptising them in the name of the Father and of the Son and of the Holy Spirit."</div>
+    <div style="font: var(--type-mono); color: var(--grape-300); letter-spacing: var(--tracking-wide)">MATTHEW 28:19</div>
+  </div>
+</section>
+</sc-if>
+<sc-if value="{{ visionLight }}" hint-placeholder-val="{{ false }}">
+<section style="background: var(--grape-50); border-block: var(--border-w-sm) solid var(--grape-100)">
+  <div style="max-width: 860px; margin: 0 auto; padding: 76px 32px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 20px">
+    <div style="font: var(--weight-bold) var(--text-eyebrow)/1 var(--font-body); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--grape-600)">Our vision</div>
+    <div style="font: var(--weight-bold) 32px/1.35 var(--font-display); letter-spacing: var(--tracking-tight); color: var(--text-strong); text-wrap: balance">Nations transformed in every area of culture — for human flourishing and the glory of God.</div>
+    <div style="font: italic var(--weight-regular) 17px/var(--leading-relaxed) var(--font-body); color: var(--grape-700); max-width: 56ch">"Go therefore and make disciples of all the nations, baptising them in the name of the Father and of the Son and of the Holy Spirit."</div>
+    <div style="font: var(--type-mono); color: var(--grape-600); letter-spacing: var(--tracking-wide)">MATTHEW 28:19</div>
+  </div>
+</section>
+</sc-if>
+
+<section style="background: var(--surface-card)">
+  <div style="max-width: 1160px; margin: 0 auto; padding: 84px 32px; display: flex; flex-direction: column; gap: 40px">
+    <div style="display: flex; flex-direction: column; gap: 10px; max-width: 62ch">
+      <h2 style="margin: 0; font: var(--weight-bold) 32px/1.2 var(--font-display); letter-spacing: var(--tracking-tight); color: var(--text-strong)">Our programmes</h2>
+      <p style="margin: 0; font: var(--type-body-lg); color: var(--text-muted)">From a lunchtime hour in the CBD to a year of deep formation — there is a place to start, whatever your season.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px">
+      <sc-for list="{{ programmes }}" as="p" hint-placeholder-count="4">
+        <div style="display: flex; flex-direction: column; gap: 0; background: var(--surface-card); border: var(--border-w-sm) solid var(--border-default); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-xs)">
+          <div style="height: 150px">
+            <image-slot id="{{ p.imgId }}" shape="rect" src="{{ p.imgSrc }}" placeholder="{{ p.imgPlaceholder }}"></image-slot>
+          </div>
+          <div style="padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 8px; flex: 1">
+            <div style="font: var(--weight-bold) 18px/1.3 var(--font-display); color: var(--text-strong)">{{ p.title }}</div>
+            <p style="margin: 0; font: var(--type-sm); color: var(--text-muted); flex: 1">{{ p.desc }}</p>
+            <a href="#" style="font: var(--weight-bold) 14px/1 var(--font-body); margin-top: 6px">Learn more →</a>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--surface-sunken); border-block: var(--border-w-sm) solid var(--border-default)">
+  <div style="max-width: 1160px; margin: 0 auto; padding: 76px 32px; display: flex; flex-direction: column; gap: 32px">
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px">
+      <div style="display: flex; flex-direction: column; gap: 8px">
+        <h2 style="margin: 0; font: var(--weight-bold) 32px/1.2 var(--font-display); letter-spacing: var(--tracking-tight); color: var(--text-strong)">Upcoming events</h2>
+        <p style="margin: 0; font: var(--type-body-lg); color: var(--text-muted)">Join us at one of our upcoming gatherings.</p>
+      </div>
+      <a href="#" style="font: var(--weight-bold) 15px/1 var(--font-display); color: var(--text-strong); background: var(--surface-card); border: var(--border-w-sm) solid var(--border-strong); padding: 13px 22px; border-radius: var(--radius-md); white-space: nowrap" style-hover="background: var(--surface-sunken); color: var(--text-strong)">Full calendar</a>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px">
+      <sc-for list="{{ events }}" as="ev" hint-placeholder-count="3">
+        <div style="background: var(--surface-card); border: var(--border-w-sm) solid var(--border-default); border-radius: var(--radius-lg); box-shadow: var(--shadow-xs); padding: 24px; display: flex; flex-direction: column; gap: 16px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 14px">
+            <div style="width: 56px; height: 56px; border-radius: var(--radius-md); border: var(--border-w-sm) solid var(--border-default); background: var(--surface-sunken); display: flex; flex-direction: column; align-items: center; justify-content: center">
+              <div style="font: var(--weight-bold) 22px/1 var(--font-display); color: var(--text-strong)">{{ ev.day }}</div>
+              <div style="font: var(--weight-bold) 10px/1.4 var(--font-body); letter-spacing: var(--tracking-wide); color: var(--text-muted); text-transform: uppercase">{{ ev.month }}</div>
+            </div>
+            <div style="display: inline-flex; background: var(--color-primary-soft); color: var(--grape-700); border-radius: var(--radius-sm); padding: 6px 12px; font: var(--weight-bold) 11px/1 var(--font-body); letter-spacing: var(--tracking-wide); text-transform: uppercase">{{ ev.tag }}</div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 6px; flex: 1">
+            <div style="font: var(--weight-bold) 18px/1.35 var(--font-display); color: var(--text-strong)">{{ ev.title }}</div>
+            <div style="font: var(--type-sm); color: var(--text-muted)">{{ ev.meta }}</div>
+          </div>
+          <a href="#" style="font: var(--weight-bold) 14px/1 var(--font-body)">Register →</a>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--surface-card)">
+  <div style="max-width: 1160px; margin: 0 auto; padding: 84px 32px">
+    <div style="background: var(--grape-50); border: var(--border-w-sm) solid var(--grape-100); border-radius: var(--radius-xl); padding: 56px 64px; display: grid; grid-template-columns: 1.2fr auto; gap: 48px; align-items: center">
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <h2 style="margin: 0; font: var(--weight-bold) 30px/1.25 var(--font-display); letter-spacing: var(--tracking-tight); color: var(--text-strong); text-wrap: balance">Will you transform culture with the key you hold?</h2>
+        <p style="margin: 0; font: var(--type-body-lg); color: var(--text-body); max-width: 52ch">Join a community of like-minded marketplace professionals — or invest in the work of raising the next fifty years of gatekeepers.</p>
+      </div>
+      <div style="display: flex; gap: 14px">
+        <a href="#" style="font: var(--weight-bold) 16px/1 var(--font-display); color: var(--text-on-primary); background: var(--grape-700); padding: 16px 28px; border-radius: var(--radius-md); box-shadow: 0 var(--edge-height) 0 var(--grape-900); white-space: nowrap" style-hover="background: var(--grape-600); color: var(--text-on-primary)" style-active="transform: translateY(4px); box-shadow: none">Become a member</a>
+        <a href="#" style="font: var(--weight-bold) 16px/1 var(--font-display); color: var(--text-strong); background: var(--surface-card); border: var(--border-w-sm) solid var(--border-strong); padding: 16px 28px; border-radius: var(--radius-md); white-space: nowrap" style-hover="background: var(--surface-sunken); color: var(--text-strong)">Give now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="background: var(--ink-900); color: var(--ink-300)">
+  <div style="max-width: 1160px; margin: 0 auto; padding: 56px 32px 40px; display: flex; flex-direction: column; gap: 40px">
+    <div style="display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px">
+      <div style="display: flex; flex-direction: column; gap: 14px">
+        <div style="display: flex; align-items: center; gap: 10px">
+          <div style="width: 32px; height: 32px; border-radius: var(--radius-sm); background: var(--grape-500); display: grid; place-items: center; color: white">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="4.5"></circle><path d="m21 2-9.6 9.6"></path><path d="m15.5 7.5 3 3L22 7l-3-3"></path></svg>
+          </div>
+          <span style="font: var(--weight-bold) 18px/1 var(--font-display); color: var(--ink-0)">Gatekeepers Singapore</span>
+        </div>
+        <div style="font: var(--type-sm); color: var(--ink-400); line-height: var(--leading-relaxed)">31 Pekin Street #02-01<br>Singapore 048761<br>+65 9010 1649 · <a href="mailto:connect@gatekeepers.sg" style="color: var(--grape-300)">connect@gatekeepers.sg</a></div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div style="font: var(--weight-bold) 12px/1 var(--font-body); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--ink-500)">Programmes</div>
+        <a href="#" style="font: var(--type-sm); color: var(--ink-300)" style-hover="color: var(--ink-0)">School of Gatekeepers</a>
+        <a href="#" style="font: var(--type-sm); color: var(--ink-300)" style-hover="color: var(--ink-0)">Lunchtime @Marketplace</a>
+        <a href="#" style="font: var(--type-sm); color: var(--ink-300)" style-hover="color: var(--ink-0)">Kingdom Gathering</a>
+        <a href="#" style="font: var(--type-sm); color: var(--ink-300)" style-hover="color: var(--ink-0)">Kingdom Code</a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div style="font: var(--weight-bold) 12px/1 var(--font-body); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--ink-500)">Community</div>
+        <a href="#" style="font: var(--type-sm); color: var(--ink-300)" style-hover="color: var(--ink-0)">Membership</a>
+        <a href="#" style="font: var(--type-sm); color: var(--ink-300)" style-hover="color: var(--ink-0)">Resources</a>
+        <a href="#" style="font: var(--type-sm); color: var(--ink-300)" style-hover="color: var(--ink-0)">Events calendar</a>
+        <a href="#" style="font: var(--type-sm); color: var(--ink-300)" style-hover="color: var(--ink-0)">Visit us</a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div style="font: var(--weight-bold) 12px/1 var(--font-body); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--ink-500)">Connect</div>
+        <a href="#" style="font: var(--type-sm); color: var(--ink-300)" style-hover="color: var(--ink-0)">Instagram</a>
+        <a href="#" style="font: var(--type-sm); color: var(--ink-300)" style-hover="color: var(--ink-0)">Telegram</a>
+        <a href="#" style="font: var(--type-sm); color: var(--ink-300)" style-hover="color: var(--ink-0)">YouTube</a>
+        <a href="#" style="font: var(--type-sm); color: var(--ink-300)" style-hover="color: var(--ink-0)">WhatsApp channel</a>
+      </div>
+    </div>
+    <div style="border-top: var(--border-w-sm) solid var(--ink-800); padding-top: 20px; display: flex; justify-content: space-between; gap: 20px; font: var(--type-sm); color: var(--ink-500)">
+      <span>© 2026 Gatekeepers (Singapore) · UEN S75SS0053H</span>
+      <a href="#" style="color: var(--ink-500)" style-hover="color: var(--ink-300)">Privacy statement</a>
+    </div>
+  </div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showAnniversary&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Hero&quot;}, &quot;visionDark&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Vision band&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const dark = this.props.visionDark ?? true;
+    return {
+      showAnniversary: this.props.showAnniversary ?? true,
+      visionDark: dark,
+      visionLight: !dark,
+      programmes: [
+        { imgId: "prog-sog", imgSrc: "https://loremflickr.com/600/380/classroom,lecture?lock=3", imgPlaceholder: "Photo — classroom cohort", title: "School of Gatekeepers", desc: "Our flagship discipleship journey — theology, vocation and leadership for the marketplace." },
+        { imgId: "prog-lunch", imgSrc: "https://loremflickr.com/600/380/lunch,networking?lock=9", imgPlaceholder: "Photo — CBD lunch gathering", title: "Lunchtime @Marketplace", desc: "A midweek hour of food, fellowship and a word for working life, in the heart of the CBD." },
+        { imgId: "prog-kg", imgSrc: "https://loremflickr.com/600/380/worship,concert?lock=5", imgPlaceholder: "Photo — worship gathering", title: "Kingdom Gathering", desc: "Worship, prayer and testimony — the wider community gathered around one table." },
+        { imgId: "prog-kc", imgSrc: "https://loremflickr.com/600/380/programmer,laptop?lock=11", imgPlaceholder: "Photo — tech meetup", title: "Kingdom Code", desc: "A community for believers in tech, working out what faithful building looks like." },
+      ],
+      events: [
+        { day: "3", month: "Sep", tag: "Lunchtime", title: "Lunchtime @Marketplace", meta: "Wed, 12.15–1.15pm · 31 Pekin Street" },
+        { day: "12", month: "Sep", tag: "Open house", title: "School of Gatekeepers — Info Night", meta: "Sat, 7.30pm · 31 Pekin Street" },
+        { day: "26", month: "Sep", tag: "Gathering", title: "Kingdom Gathering", meta: "Sat, 4.00pm · venue announced on RSVP" },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
