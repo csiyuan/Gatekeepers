@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="tokens/fonts.css">
+<link rel="stylesheet" href="tokens/colors.css">
+<link rel="stylesheet" href="tokens/typography.css">
+<link rel="stylesheet" href="tokens/spacing.css">
+<script src="./image-slot.js"></script>
+<style>
+body{margin:0;background:var(--bg-app);font:var(--type-body);color:var(--text-body);-webkit-font-smoothing:antialiased}
+a{color:#1D6B81;text-decoration:none}
+a:hover{color:#23809A}
+</style>
+</helmet>
+<div style="min-width: 1100px">
+<header style="position: absolute; top: 0; left: 0; right: 0; z-index: 5; background: transparent">
+  <div style="max-width: 1160px; margin: 0 auto; padding: 20px 32px; display: flex; align-items: center; gap: 32px">
+    <div style="display: flex; align-items: center; gap: 10px">
+      <svg width="44" height="44" viewBox="0 0 100 100"><circle cx="62" cy="21" r="17" fill="#A6A29B"></circle><circle cx="36" cy="64" r="31" fill="#2C89A0"></circle><circle cx="63" cy="43" r="16" fill="#D42433"></circle><text x="36" y="60" text-anchor="middle" fill="#FFFFFF" font-family="Nunito, sans-serif" font-weight="800" font-size="19">GK</text><text x="36" y="79" text-anchor="middle" fill="#FFFFFF" font-family="Nunito, sans-serif" font-weight="800" font-size="19">50</text></svg>
+      <div style="display: flex; flex-direction: column; line-height: 1">
+        <span style="font: var(--weight-bold) 19px/1 var(--font-display); color: var(--ink-0); letter-spacing: var(--tracking-tight)">Gatekeepers</span>
+        <span style="font: var(--weight-semibold) 10px/1.5 var(--font-body); letter-spacing: var(--tracking-eyebrow); color: #D8B25A; text-transform: uppercase; letter-spacing: 0.14em">1975 – 2025</span>
+      </div>
+    </div>
+    <nav style="display: flex; gap: 28px; margin-left: auto; align-items: center">
+      <a href="#" style="font: var(--weight-semibold) 15px/1 var(--font-body); color: rgba(255,255,255,0.85); font-weight: 800" style-hover="color: var(--ink-0)">School of Gatekeepers</a>
+      <a href="#" style="font: var(--weight-semibold) 15px/1 var(--font-body); color: rgba(255,255,255,0.85); font-weight: 800" style-hover="color: var(--ink-0)">Events</a>
+      <a href="#" style="font: var(--weight-semibold) 15px/1 var(--font-body); color: rgba(255,255,255,0.85); font-weight: 800" style-hover="color: var(--ink-0)">Membership</a>
+      <a href="#" style="font: var(--weight-semibold) 15px/1 var(--font-body); color: rgba(255,255,255,0.85); font-weight: 800" style-hover="color: var(--ink-0)">About us</a>
+    </nav>
+    <a href="#" style="font: var(--weight-bold) 15px/1 var(--font-display); color: var(--ink-0); background: rgba(255,255,255,0.14); border: var(--border-w-sm) solid rgba(255,255,255,0.45); padding: 12px 22px; border-radius: var(--radius-md)" style-hover="background: rgba(255,255,255,0.26); color: var(--ink-0)">Give now</a>
+  </div>
+</header>
+
+<section style="background: var(--surface-card)">
+  <div style="position: relative; background: var(--ink-900); min-height: 100svh; display: flex; align-items: center">
+    <div style="position: absolute; inset: 0">
+      <image-slot id="v2-hero" shape="rect" src="https://loremflickr.com/1600/700/conference,audience?lock=14" placeholder="Hero photo — a Gatekeepers gathering"></image-slot>
+    </div>
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(23,19,39,0.6) 0%, rgba(23,19,39,0) 160px), linear-gradient(90deg, rgba(23,19,39,0.86) 0%, rgba(23,19,39,0.62) 48%, rgba(23,19,39,0.18) 100%); pointer-events: none"></div>
+    <div style="position: relative; width: 100%; max-width: 1160px; margin: 0 auto; padding: 120px 32px 80px; pointer-events: none">
+      <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 24px; max-width: 640px">
+        <sc-if value="{{ showJubilee }}" hint-placeholder-val="{{ true }}">
+          <div style="font: var(--weight-bold) var(--text-eyebrow)/1 var(--font-body); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: #D8B25A; border-bottom: var(--border-w) solid rgba(216,178,90,0.55); padding-bottom: 8px">Celebrating our Jubilee — 50 years since 1975</div>
+        </sc-if>
+        <h1 style="margin: 0; font: var(--weight-extra) 68px/1.04 var(--font-display); letter-spacing: -0.02em; color: var(--ink-0); text-wrap: balance">Transforming lives,<br>impacting culture.</h1>
+        <p style="margin: 0; font: var(--type-body-lg); color: var(--ink-100); max-width: 50ch">Since 1975, we have discipled marketplace Christians to live out Kingdom values in their workplace, industry and society.</p>
+        <div style="display: flex; gap: 14px; margin-top: 8px; pointer-events: auto">
+          <a href="#" style="font: var(--weight-bold) 16px/1 var(--font-display); color: #12414F; background: var(--ink-0); padding: 16px 28px; border-radius: var(--radius-md)" style-hover="background: #D8EBF1; color: #12414F">Explore our programmes</a>
+          <a href="#" style="font: var(--weight-bold) 16px/1 var(--font-display); color: var(--ink-0); border: var(--border-w-sm) solid rgba(255,255,255,0.55); padding: 16px 28px; border-radius: var(--radius-md)" style-hover="background: rgba(255,255,255,0.12); color: var(--ink-0)">Become a member</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--surface-sunken); border-bottom: var(--border-w-sm) solid var(--border-default)">
+  <div style="max-width: 1160px; margin: 0 auto; padding: 80px 32px; display: flex; flex-direction: column; gap: 44px">
+    <div style="display: flex; flex-direction: column; gap: 10px; max-width: 64ch">
+      <div style="font: var(--weight-bold) var(--text-eyebrow)/1 var(--font-body); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: #1D6B81; display: flex; align-items: center; gap: 12px"><span style="width: 26px; height: 3px; background: #C11F2E; display: inline-block"></span>Our mission — the 3 I's</div>
+      <h2 style="margin: 0; font: var(--weight-extra) 40px/1.12 var(--font-display); letter-spacing: -0.015em; color: var(--text-strong); max-width: 20ch; text-wrap: balance">Every believer, an ambassador in the marketplace.</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px">
+      <sc-for list="{{ pillars }}" as="pl" hint-placeholder-count="3">
+        <div style="position: relative; overflow: hidden; background: var(--surface-card); border: var(--border-w-sm) solid var(--border-default); border-radius: var(--radius-xl); box-shadow: var(--shadow-sm); padding: 34px 32px 32px; display: flex; flex-direction: column; gap: 14px" style-hover="transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: #BFDFE9">
+          <div style="position: absolute; top: -26px; right: -12px; font: var(--weight-extra) 110px/1 var(--font-display); color: #EDF5F8; pointer-events: none">{{ pl.bigLetter }}</div>
+          <div style="position: relative; width: 52px; height: 52px; border-radius: var(--radius-circle); background: {{ pl.iconBg }}; color: {{ pl.iconFg }}; display: grid; place-items: center">{{ pl.icon }}</div>
+          <div style="position: relative; font: var(--weight-extra) 21px/1.25 var(--font-display); color: var(--text-strong)">{{ pl.title }}</div>
+          <p style="position: relative; margin: 0; font: var(--type-body); color: var(--text-muted)">{{ pl.desc }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--surface-card)">
+  <div style="max-width: 1160px; margin: 0 auto; padding: 84px 32px">
+    <div style="position: relative; border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-md)">
+      <div style="position: absolute; inset: 0">
+        <image-slot id="v2-sog-bg" shape="rect" src="https://loremflickr.com/1600/800/singapore,skyline?lock=17" placeholder="Background photo"></image-slot>
+      </div>
+      <div style="position: relative; background: rgba(16,58,71,0.66); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.22); border-radius: var(--radius-xl); display: grid; grid-template-columns: 1.1fr 0.9fr">
+      <div style="padding: 56px 56px 56px 64px; display: flex; flex-direction: column; align-items: flex-start; gap: 20px">
+        <div style="font: var(--weight-bold) var(--text-eyebrow)/1 var(--font-body); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: #8FC6D6">Flagship programme</div>
+        <h2 style="margin: 0; font: var(--weight-extra) 42px/1.08 var(--font-display); letter-spacing: -0.015em; color: var(--ink-0)">School of Gatekeepers</h2>
+        <p style="margin: 0; font: var(--type-body-lg); color: #D8EBF1; max-width: 48ch">A 2.5-day school for every Christian marketplace professional — integrating faith with work, whether you are entering the workforce, leading at the top, or in transition.</p>
+        <div style="display: grid; grid-template-columns: auto 1fr; gap: 8px 20px; font: var(--type-sm); color: #BFDFE9; margin-top: 4px">
+          <span style="font-weight: var(--weight-bold); color: #8FC6D6">Cohort 7</span><span>9–11 April 2027</span>
+          <span style="font-weight: var(--weight-bold); color: #8FC6D6">Venue</span><span>Village Hotel Katong — 3 mins from Marine Parade MRT</span>
+          <span style="font-weight: var(--weight-bold); color: #8FC6D6">Fee</span><span>Early bird S$580 · Regular S$745 · scholarships available</span>
+        </div>
+        <div style="display: flex; gap: 14px; margin-top: 10px">
+          <a href="#" style="font: var(--weight-bold) 16px/1 var(--font-display); color: #12414F; background: var(--ink-0); padding: 15px 26px; border-radius: var(--radius-md)" style-hover="background: #D8EBF1; color: #12414F">Register for Cohort 7</a>
+          <a href="#" style="font: var(--weight-bold) 16px/1 var(--font-display); color: var(--ink-0); border: var(--border-w-sm) solid #1D6B81; padding: 15px 26px; border-radius: var(--radius-md)" style-hover="background: #1A5164; color: var(--ink-0)">View programme</a>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 24px; padding: 56px 64px 56px 0">
+        <div style="flex: 1; min-height: 220px; border-radius: var(--radius-md); overflow: hidden">
+          <image-slot id="v2-sog" shape="rect" src="https://loremflickr.com/700/500/classroom,lecture?lock=3" placeholder="Photo — SOG cohort"></image-slot>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px; border-top: var(--border-w-sm) solid #1A5164; padding-top: 20px">
+          <p style="margin: 0; font: italic var(--weight-regular) 14px/var(--leading-relaxed) var(--font-body); color: #D8EBF1">"I was reminded to work from a place of rest, victory and security in my identity as a child of God… I've been very refreshed and blessed by the 2.5 days together and highly recommend it!"</p>
+          <div style="font: var(--weight-bold) 12px/1.4 var(--font-body); letter-spacing: var(--tracking-wide); text-transform: uppercase; color: #8FC6D6">Christine · Education sector · Cohort 6</div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--surface-card); border-top: var(--border-w-sm) solid var(--border-default)">
+  <div style="max-width: 1160px; margin: 0 auto; padding: 80px 32px; display: flex; flex-direction: column; gap: 36px">
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px">
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div style="font: var(--weight-bold) var(--text-eyebrow)/1 var(--font-body); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: #1D6B81; display: flex; align-items: center; gap: 12px"><span style="width: 26px; height: 3px; background: #C11F2E; display: inline-block"></span>Gather with us</div>
+        <h2 style="margin: 0; font: var(--weight-extra) 40px/1.12 var(--font-display); letter-spacing: -0.015em; color: var(--text-strong)">Regular gatherings, open to all</h2>
+      </div>
+      <a href="#" style="font: var(--weight-bold) 15px/1 var(--font-display); color: var(--text-strong); background: var(--surface-card); border: var(--border-w-sm) solid var(--border-strong); padding: 13px 22px; border-radius: var(--radius-md); white-space: nowrap" style-hover="background: var(--surface-sunken); color: var(--text-strong)">Events calendar</a>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px">
+      <sc-for list="{{ gatherings }}" as="g" hint-placeholder-count="3">
+        <div style="display: flex; flex-direction: column; background: var(--surface-card); border: var(--border-w-sm) solid var(--border-default); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-xs)">
+          <div style="height: 170px">
+            <image-slot id="{{ g.imgId }}" shape="rect" src="{{ g.imgSrc }}" placeholder="{{ g.imgPh }}"></image-slot>
+          </div>
+          <div style="padding: 22px 24px 24px; display: flex; flex-direction: column; gap: 8px; flex: 1">
+            <div style="font: var(--weight-bold) 11px/1 var(--font-body); letter-spacing: var(--tracking-wide); text-transform: uppercase; color: #1D6B81; display: flex; align-items: center; gap: 12px"><span style="width: 26px; height: 3px; background: #C11F2E; display: inline-block"></span>{{ g.cadence }}</div>
+            <div style="font: var(--weight-extra) 20px/1.3 var(--font-display); color: var(--text-strong)">{{ g.title }}</div>
+            <p style="margin: 0; font: var(--type-sm); color: var(--text-muted); flex: 1">{{ g.desc }}</p>
+            <a href="#" style="font: var(--weight-bold) 14px/1 var(--font-body); margin-top: 8px; align-self: flex-start; border-bottom: 2px solid #BFDFE9; padding-bottom: 3px" style-hover="border-bottom-color: #1D6B81">Find out more</a>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--surface-sunken); border-block: var(--border-w-sm) solid var(--border-default)">
+  <div style="max-width: 1160px; margin: 0 auto; padding: 80px 32px; display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 64px; align-items: center">
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 18px">
+      <div style="font: var(--weight-bold) var(--text-eyebrow)/1 var(--font-body); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: #1D6B81; display: flex; align-items: center; gap: 12px"><span style="width: 26px; height: 3px; background: #C11F2E; display: inline-block"></span>Membership</div>
+      <h2 style="margin: 0; font: var(--weight-extra) 40px/1.12 var(--font-display); letter-spacing: -0.015em; color: var(--text-strong)">Join a community of likeminded believers</h2>
+      <p style="margin: 0; font: var(--type-body); color: var(--text-body); max-width: 46ch">Members come from different denominations, generations, industries and positions — and are encouraged to join a Gate, meeting monthly to build purpose and community.</p>
+      <div style="display: flex; align-items: baseline; gap: 10px">
+        <span style="font: var(--weight-extra) 44px/1 var(--font-display); color: var(--text-strong)">S$120</span>
+        <span style="font: var(--type-sm); color: var(--text-muted)">per year — just $10 a month</span>
+      </div>
+      <a href="#" style="font: var(--weight-bold) 16px/1 var(--font-display); color: var(--text-on-primary); background: #175A6D; padding: 16px 28px; border-radius: var(--radius-md); box-shadow: 0 var(--edge-height) 0 #12414F" style-hover="background: #1D6B81; color: var(--text-on-primary)" style-active="transform: translateY(4px); box-shadow: none">Sign up as a member</a>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px">
+      <sc-for list="{{ benefits }}" as="b" hint-placeholder-count="4">
+        <div style="background: var(--surface-card); border: var(--border-w-sm) solid var(--border-default); border-radius: var(--radius-xl); box-shadow: var(--shadow-xs); padding: 26px 26px 24px; display: flex; flex-direction: column; gap: 12px" style-hover="transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: #BFDFE9">
+          <div style="width: 46px; height: 46px; border-radius: var(--radius-circle); background: {{ b.iconBg }}; color: {{ b.iconFg }}; display: grid; place-items: center">{{ b.icon }}</div>
+          <div style="font: var(--weight-extra) 18px/1.2 var(--font-display); color: var(--text-strong)">{{ b.title }}</div>
+          <p style="margin: 0; font: var(--type-sm); color: var(--text-muted)">{{ b.desc }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--surface-card)">
+  <div style="max-width: 1160px; margin: 0 auto; padding: 72px 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px">
+    <div style="border: var(--border-w-sm) solid var(--border-default); border-radius: var(--radius-lg); padding: 32px 36px; display: flex; flex-direction: column; align-items: flex-start; gap: 12px">
+      <h3 style="margin: 0; font: var(--weight-extra) 22px/1.25 var(--font-display); color: var(--text-strong)">Accountable stewardship</h3>
+      <p style="margin: 0; font: var(--type-sm); color: var(--text-muted); max-width: 52ch">We are committed to faithful, excellent stewardship — with proper governance and ESG standards over all that is entrusted to us. Our annual report is available for review.</p>
+      <a href="#" style="font: var(--weight-bold) 14px/1 var(--font-body); margin-top: 6px; align-self: flex-start; border-bottom: 2px solid #BFDFE9; padding-bottom: 3px" style-hover="border-bottom-color: #1D6B81">View annual report</a>
+    </div>
+    <div style="background: #EDF5F8; border: var(--border-w-sm) solid #D8EBF1; border-radius: var(--radius-lg); padding: 32px 36px; display: flex; flex-direction: column; align-items: flex-start; gap: 12px">
+      <h3 style="margin: 0; font: var(--weight-extra) 22px/1.25 var(--font-display); color: var(--text-strong)">Invest in the next 50 years</h3>
+      <p style="margin: 0; font: var(--type-sm); color: var(--text-body); max-width: 52ch">Your giving resources upstream Kingdom initiatives with spiritual, social, human and financial capital — for human flourishing and a thriving society.</p>
+      <a href="#" style="font: var(--weight-bold) 15px/1 var(--font-display); color: var(--text-on-primary); background: #C11F2E; padding: 14px 24px; border-radius: var(--radius-md); margin-top: 6px" style-hover="background: #D42433; color: var(--text-on-primary)">Give now</a>
+    </div>
+  </div>
+</section>
+
+<footer style="background: #26292C; color: var(--ink-300)">
+  <div style="max-width: 1160px; margin: 0 auto; padding: 56px 32px 40px; display: flex; flex-direction: column; gap: 40px">
+    <div style="display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px">
+      <div style="display: flex; flex-direction: column; gap: 14px">
+        <div style="display: flex; align-items: center; gap: 10px">
+          <svg width="38" height="38" viewBox="0 0 100 100"><circle cx="62" cy="21" r="17" fill="#A6A29B"></circle><circle cx="36" cy="64" r="31" fill="#2C89A0"></circle><circle cx="63" cy="43" r="16" fill="#D42433"></circle><text x="36" y="60" text-anchor="middle" fill="#FFFFFF" font-family="Nunito, sans-serif" font-weight="800" font-size="19">GK</text><text x="36" y="79" text-anchor="middle" fill="#FFFFFF" font-family="Nunito, sans-serif" font-weight="800" font-size="19">50</text></svg>
+          <span style="font: var(--weight-bold) 18px/1 var(--font-display); color: var(--ink-0)">Gatekeepers Singapore</span>
+        </div>
+        <div style="font: var(--type-sm); color: var(--ink-400); line-height: var(--leading-relaxed)">31 Pekin Street #02-01<br>Singapore 048761<br>+65 9010 1649 · <a href="mailto:connect@gatekeepers.sg" style="color: #8FC6D6">connect@gatekeepers.sg</a></div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div style="font: var(--weight-bold) 12px/1 var(--font-body); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--ink-500)">Programmes</div>
+        <a href="#" style="font: var(--type-sm); color: var(--ink-300)" style-hover="color: var(--ink-0)">School of Gatekeepers</a>
+        <a href="#" style="font: var(--type-sm); color: var(--ink-300)" style-hover="color: var(--ink-0)">Lunchtime @Marketplace</a>
+        <a href="#" style="font: var(--type-sm); color: var(--ink-300)" style-hover="color: var(--ink-0)">Kingdom Gathering</a>
+        <a href="#" style="font: var(--type-sm); color: var(--ink-300)" style-hover="color: var(--ink-0)">Kingdom Code</a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div style="font: var(--weight-bold) 12px/1 var(--font-body); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--ink-500)">Community</div>
+        <a href="#" style="font: var(--type-sm); color: var(--ink-300)" style-hover="color: var(--ink-0)">Membership</a>
+        <a href="#" style="font: var(--type-sm); color: var(--ink-300)" style-hover="color: var(--ink-0)">The Gates</a>
+        <a href="#" style="font: var(--type-sm); color: var(--ink-300)" style-hover="color: var(--ink-0)">Resources</a>
+        <a href="#" style="font: var(--type-sm); color: var(--ink-300)" style-hover="color: var(--ink-0)">Visit us</a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div style="font: var(--weight-bold) 12px/1 var(--font-body); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--ink-500)">About</div>
+        <a href="#" style="font: var(--type-sm); color: var(--ink-300)" style-hover="color: var(--ink-0)">Our mission</a>
+        <a href="#" style="font: var(--type-sm); color: var(--ink-300)" style-hover="color: var(--ink-0)">Our team</a>
+        <a href="#" style="font: var(--type-sm); color: var(--ink-300)" style-hover="color: var(--ink-0)">Annual report</a>
+        <a href="#" style="font: var(--type-sm); color: var(--ink-300)" style-hover="color: var(--ink-0)">Contact us</a>
+      </div>
+    </div>
+    <div style="border-top: var(--border-w-sm) solid #3A3E42; padding-top: 20px; display: flex; justify-content: space-between; gap: 20px; font: var(--type-sm); color: var(--ink-500)">
+      <span>© 2026 Gatekeepers (Singapore) · UEN S75SS0053H</span>
+      <a href="#" style="color: var(--ink-500)" style-hover="color: var(--ink-300)">Privacy statement</a>
+    </div>
+  </div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showJubilee&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Hero&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      showJubilee: this.props.showJubilee ?? true,
+      pillars: [
+        { bigLetter: "I", iconBg: "#D8EBF1", iconFg: "#175A6D", title: "Intentional Discipleship", desc: "Equipping marketplace Christians to live out Kingdom values and exercise godly influence.",
+          icon: React.createElement("svg", { width: 24, height: 24, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }, React.createElement("path", { d: "M4 19.5A2.5 2.5 0 0 1 6.5 17H20" }), React.createElement("path", { d: "M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" })) },
+        { bigLetter: "I", iconBg: "#FBE3E5", iconFg: "#C11F2E", title: "Influential Leadership", desc: "Investing in present and future marketplace leaders to excel and make a difference in their field.",
+          icon: React.createElement("svg", { width: 24, height: 24, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }, React.createElement("polyline", { points: "22 7 13.5 15.5 8.5 10.5 2 17" }), React.createElement("polyline", { points: "16 7 22 7 22 13" })) },
+        { bigLetter: "I", iconBg: "#F3EBD7", iconFg: "#A5813B", title: "Impactful Stewardship", desc: "Resourcing upstream Kingdom initiatives with spiritual, social, human and financial capital.",
+          icon: React.createElement("svg", { width: 24, height: 24, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }, React.createElement("path", { d: "M12 2v20" }), React.createElement("path", { d: "M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" })) },
+      ],
+      gatherings: [
+        { imgId: "v2-lunch", imgSrc: "https://loremflickr.com/600/400/lunch,networking?lock=9", imgPh: "Photo — CBD lunch gathering", cadence: "Monthly · CBD", title: "Lunchtime @Marketplace", desc: "A midweek hour of food, fellowship and a word for working life, at 31 Pekin Street." },
+        { imgId: "v2-kg", imgSrc: "https://loremflickr.com/600/400/worship,concert?lock=5", imgPh: "Photo — worship gathering", cadence: "Quarterly", title: "Kingdom Gathering", desc: "Worship, prayer and testimony — the wider community gathered around one table." },
+        { imgId: "v2-kc", imgSrc: "https://loremflickr.com/600/400/programmer,laptop?lock=11", imgPh: "Photo — tech community", cadence: "Community", title: "Kingdom Code", desc: "A community for believers in tech, working out what faithful building looks like." },
+      ],
+      benefits: [
+        { title: "Gather", iconBg: "#D8EBF1", iconFg: "#175A6D", desc: "Build strategic Kingdom networks and genuine relationships in a vibrant, likeminded Gate community.",
+          icon: React.createElement("svg", { width: 22, height: 22, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }, React.createElement("path", { d: "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" }), React.createElement("circle", { cx: 9, cy: 7, r: 4 }), React.createElement("path", { d: "M22 21v-2a4 4 0 0 0-3-3.87" }), React.createElement("path", { d: "M16 3.13a4 4 0 0 1 0 7.75" })) },
+        { title: "Advance", iconBg: "#FBE3E5", iconFg: "#C11F2E", desc: "Member pricing for exclusive masterclasses and curated programmes to keep growing your leadership.",
+          icon: React.createElement("svg", { width: 22, height: 22, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }, React.createElement("path", { d: "M12 19V5" }), React.createElement("path", { d: "m5 12 7-7 7 7" })) },
+        { title: "Thrive", iconBg: "#F3EBD7", iconFg: "#A5813B", desc: "Exclusive pastoral coaching from seasoned leaders — including one complimentary session.",
+          icon: React.createElement("svg", { width: 22, height: 22, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }, React.createElement("path", { d: "M7 20h10" }), React.createElement("path", { d: "M12 20v-6" }), React.createElement("path", { d: "M12 14a6 6 0 0 0 6-6V4a10 10 0 0 1-6 4 10 10 0 0 1-6-4v4a6 6 0 0 0 6 6z" })) },
+        { title: "Execute", iconBg: "#E3EFE6", iconFg: "#3E7A4E", desc: "Apply your influence to address marketplace challenges and deliver measurable culture impact.",
+          icon: React.createElement("svg", { width: 22, height: 22, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }, React.createElement("circle", { cx: 12, cy: 12, r: 10 }), React.createElement("circle", { cx: 12, cy: 12, r: 6 }), React.createElement("circle", { cx: 12, cy: 12, r: 2 })) },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
